@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anish Maddi — Software Engineer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236d5efc'/%3E%3Cstop offset='1' stop-color='%2318c8a8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='white'%3EAM%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#f6f7fb;--surface:#fff;--text:#12131a;--muted:#5b6070;--line:#e3e5ee;--a:#6d5efc;--b:#18c8a8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0c12;--surface:#14151e;--text:#eef0f7;--muted:#9aa0b4;--line:#242636}}
+:root[data-theme="dark"]{--bg:#0b0c12;--surface:#14151e;--text:#eef0f7;--muted:#9aa0b4;--line:#242636}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;overflow-x:hidden}
+.blob{position:fixed;width:46vmax;height:46vmax;border-radius:50%;filter:blur(90px);opacity:.28;z-index:0;pointer-events:none;animation:float 16s ease-in-out infinite alternate}
+.b1{background:var(--a);top:-15vmax;left:-10vmax}.b2{background:var(--b);bottom:-18vmax;right:-12vmax;animation-delay:-8s}
+@keyframes float{to{transform:translate(6vmax,5vmax) scale(1.15)}}
+#glow{position:fixed;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,var(--a),transparent 65%);opacity:.14;pointer-events:none;transform:translate(-50%,-50%);z-index:0}
+nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 75%,transparent);border-bottom:1px solid var(--line)}
+nav b{font-size:18px}nav div{display:flex;gap:20px;align-items:center}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;transition:.2s}nav a:hover{color:var(--text)}
+#theme{background:none;border:1px solid var(--line);color:var(--text);border-radius:50%;width:34px;height:34px;cursor:pointer}
+main{position:relative;z-index:1;max-width:1050px;margin:0 auto;padding:0 5vw}
+section{padding:80px 0 20px}
+.hero{min-height:84vh;display:flex;flex-direction:column;justify-content:center}
+.tag{display:inline-block;padding:5px 12px;border:1px solid var(--line);border-radius:99px;font-size:13px;color:var(--muted);background:var(--surface);width:fit-content}
+.dot{display:inline-block;width:8px;height:8px;background:var(--b);border-radius:50%;margin-right:7px;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.25}}
+h1{font-size:clamp(38px,7vw,74px);line-height:1.05;margin:18px 0 12px;letter-spacing:-.03em}
+.grad{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.type{font-size:clamp(18px,2.6vw,26px);color:var(--muted);min-height:1.6em}
+.type::after{content:"|";margin-left:2px;animation:pulse 1s infinite}
+.lead{max-width:600px;color:var(--muted);margin:14px 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;transition:.25s;border:1px solid var(--line);color:var(--text);background:var(--surface)}
+.btn.p{background:linear-gradient(90deg,var(--a),var(--b));color:#fff;border:0}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(109,94,252,.25)}
+h2{font-size:30px;margin:0 0 6px;letter-spacing:-.02em}.sub{color:var(--muted);margin:0 0 28px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:36px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.stat b{font-size:30px;display:block}.stat span{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .25s,box-shadow .25s,border-color .25s;transform-style:preserve-3d}
+.card:hover{border-color:var(--a);box-shadow:0 18px 40px rgba(109,94,252,.18)}
+.card h3{margin:10px 0 6px;font-size:19px}.card p{color:var(--muted);font-size:14.5px;margin:0 0 10px}.card p b{color:var(--text)}
+.thumb{height:130px;border-radius:10px;background:linear-gradient(135deg,var(--a),var(--b));opacity:.85;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chips span{font-size:12px;padding:3px 10px;border-radius:99px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+.links{margin-top:12px;display:flex;gap:14px;font-size:14px}.links a{color:var(--a);text-decoration:none;font-weight:600}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters button{padding:7px 16px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;font-size:14px;transition:.2s}
+.filters button.on{background:var(--a);color:#fff;border-color:var(--a)}
+.tl{border-left:2px solid var(--line);padding-left:24px;margin-left:6px}
+.tl .it{position:relative;margin-bottom:26px}.tl .it::before{content:"";position:absolute;left:-31px;top:7px;width:12px;height:12px;border-radius:50%;background:linear-gradient(var(--a),var(--b))}
+.tl h3{margin:0;font-size:17px}.tl small{color:var(--muted)}.tl ul{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px}
+.bar{margin-bottom:14px}.bar div:first-child{display:flex;justify-content:space-between;font-size:14px;margin-bottom:5px}
+.bar .t{height:8px;border-radius:9px;background:var(--line);overflow:hidden}.bar .f{height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--a),var(--b));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.contact{text-align:center;padding:90px 0}
+footer{position:relative;z-index:1;text-align:center;color:var(--muted);font-size:13px;padding:30px 0 40px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b));z-index:30}
+.sk{position:relative;overflow:hidden}
+.sk::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--a),var(--b))}
+.ico{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;background:linear-gradient(135deg,var(--a),var(--b))}
+.chips.big{gap:8px}.chips.big span{font-size:13px;padding:6px 13px;transition:.2s}
+.chips.big span:hover{background:linear-gradient(90deg,var(--a),var(--b));color:#fff;border-color:transparent;transform:translateY(-2px)}
+.marq{margin-top:26px;overflow:hidden;border-block:1px solid var(--line);padding:14px 0;-webkit-mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.track{display:flex;gap:38px;width:max-content;animation:mq 32s linear infinite}
+.track span{font-size:20px;font-weight:700;color:var(--muted);white-space:nowrap;opacity:.7}
+.marq:hover .track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+#contact .btn{background:#fff;color:#12131a;border:1px solid #e3e5ee}
+#contact .btn:hover{color:#fff;border-color:transparent}
+#contact .btns .btn:nth-child(1):hover{background:linear-gradient(90deg,#6d5efc,#18c8a8)}
+#contact .btns .btn:nth-child(2):hover{background:#f59e0b}
+#contact .btns .btn:nth-child(3):hover{background:#0a66c2}
+#contact .btns .btn:nth-child(4):hover{background:#24292f}
+@media (hover:hover) and (pointer:fine){body.cc,body.cc *{cursor:none!important}}
+.cur-dot,.cur-ring,.cur-rip{position:fixed;top:0;left:0;pointer-events:none;z-index:100;border-radius:50%}
+.cur-dot{width:8px;height:8px;margin:-4px 0 0 -4px;background:linear-gradient(135deg,var(--a),var(--b));opacity:0;transition:opacity .3s}
+.cur-ring{width:36px;height:36px;margin:-18px 0 0 -18px;border:1.5px solid var(--a);opacity:0;transition:width .25s,height .25s,margin .25s,background .25s,border-color .25s,opacity .3s}
+.cur-ring.hov{width:54px;height:54px;margin:-27px 0 0 -27px;background:color-mix(in srgb,var(--a) 14%,transparent);border-color:var(--b)}
+.cur-ring.down{width:24px;height:24px;margin:-12px 0 0 -12px;background:color-mix(in srgb,var(--b) 30%,transparent)}
+.cur-rip{width:20px;height:20px;margin:-10px 0 0 -10px;border:2px solid var(--b);animation:rip .6s ease-out forwards}
+@keyframes rip{to{transform:scale(4);opacity:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div><div class="blob b1"></div><div class="blob b2"></div><div id="glow"></div><div class="cur-dot" id="cd"></div><div class="cur-ring" id="cr"></div>
+<nav><b class="grad">AM.</b><div><a href="#about">About</a><a href="#roles">Roles</a><a href="#work">Projects</a><a href="#exp">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a><button id="theme" aria-label="Toggle theme">◐</button></div></nav>
+<main>
+<section class="hero" id="top">
+  <span class="tag"><i class="dot"></i>Open to work · Dallas, TX · Relocation OK</span>
+  <h1>Hi, I’m <span class="grad">Anish Maddi</span>.</h1>
+  <div class="type" id="type"></div>
+  <p class="lead">Software engineer with range: I build user-facing apps in React and Next.js, backend services in Java and Spring Boot, and the cloud and CI/CD infrastructure that runs them on AWS. I use AI coding tools to ship faster without cutting quality.</p>
+  <div class="btns"><a class="btn p" href="#work">View my work</a><a class="btn" href="#contact">Let’s talk</a></div>
+  <div class="stats">
+    <div class="stat"><b data-n="3" data-s="+">0</b><span>Years of experience</span></div>
+    <div class="stat"><b data-n="6">0</b><span>Featured projects</span></div>
+    <div class="stat"><b data-n="96" data-s="">0</b><span>Lighthouse performance score</span></div>
+    <div class="stat"><b data-n="2" data-s="">0</b><span>Published research papers</span></div>
+  </div>
+</section>
+
+<section id="roles" class="rv"><h2>Roles I’m open to</h2><p class="sub">One engineer, several tracks. Pick the one that fits your team.</p>
+  <div class="grid">
+    <div class="card"><h3>Software Engineer</h3><p>General product engineering across the stack, from design to release.</p><div class="chips"><span>Java</span><span>Python</span><span>TypeScript</span></div></div>
+    <div class="card"><h3>Full Stack Engineer</h3><p>Accounts, checkout, and dashboards with React, Next.js, and REST APIs.</p><div class="chips"><span>React</span><span>Next.js</span><span>Spring Boot</span></div></div>
+    <div class="card"><h3>Backend Engineer</h3><p>Microservices and event-driven systems built for resilience and throughput.</p><div class="chips"><span>Spring Boot</span><span>Kafka</span><span>PostgreSQL</span></div></div>
+    <div class="card"><h3>DevOps / Cloud / SRE</h3><p>CI/CD, infrastructure as code, Kubernetes, and observability on AWS.</p><div class="chips"><span>Terraform</span><span>Kubernetes</span><span>Jenkins</span></div></div>
+  </div></section>
+
+<section id="about" class="rv"><h2>About</h2><p class="sub">A little about me.</p>
+  <p style="max-width:100%;font-size:1rem;line-height:1.8;color:var(--muted)">I’m a software engineer with 3 years of hands-on experience.<br>I enjoy owning work from the first idea all the way to production.<br>I pick up new tools quickly and adapt to whatever the team needs.<br>I care about quality, speed, and building things people actually use.<br>I work well with others and I’m always looking to learn more.<br>I’m open to opportunities across engineering, so let’s connect.</p></section>
+
+<section id="work"><h2 class="rv">Projects</h2><p class="sub rv">Filter by type to explore each project.</p>
+  <div class="filters rv"><button class="on" data-f="all">All</button><button data-f="fullstack">Full Stack</button><button data-f="backend">Backend</button><button data-f="cloud">Cloud / DevOps</button><button data-f="mobile">Mobile</button><button data-f="ai">AI</button></div>
+  <div class="grid">
+    <div class="card rv" data-c="fullstack"><div class="thumb">Storefront</div><h3>AI-Built E-Commerce Storefront</h3><p><b>How it works:</b> Customers sign up, browse a catalog, fill a cart, and pay through a Stripe-powered checkout. A Next.js front end talks to a Spring Boot REST API backed by PostgreSQL.</p><p><b>Goal:</b> Give shoppers a fast, low-friction path from landing page to purchase on any device or network.</p><p><b>Principles:</b> Performance first (Core Web Vitals, optimized images, caching), minimal checkout steps, and data-informed decisions.</p><div class="chips"><span>Next.js</span><span>TypeScript</span><span>Spring Boot</span><span>Stripe</span></div></div>
+    <div class="card rv" data-c="mobile"><div class="thumb">Mobile app</div><h3>Cross-Platform Commerce App</h3><p><b>How it works:</b> One React Native codebase delivers iOS and Android screens for accounts, a home feed, and purchases, all connected to REST APIs.</p><p><b>Goal:</b> Make shopping feel smooth on mid-range phones and slow connections, not just flagship devices.</p><p><b>Principles:</b> Lazy loading, offline caching, efficient list rendering, and crash and latency monitoring with Sentry.</p><div class="chips"><span>React Native</span><span>TypeScript</span><span>Sentry</span></div></div>
+    <div class="card rv" data-c="fullstack"><div class="thumb">A/B platform</div><h3>Experimentation Platform</h3><p><b>How it works:</b> Teams define feature flags, users are assigned to variants (bucketed), and a dashboard compares how each variant affects conversion.</p><p><b>Goal:</b> Replace guesswork with evidence when deciding which UI changes to ship.</p><p><b>Principles:</b> Consistent user bucketing, clear metrics defined up front, and safe rollouts that can be switched off instantly.</p><div class="chips"><span>React</span><span>Node.js</span><span>PostgreSQL</span></div></div>
+    <div class="card rv" data-c="backend"><div class="thumb">Backend</div><h3>Event-Driven Order Service</h3><p><b>How it works:</b> A Spring Boot microservice receives order events and processes them asynchronously through Kafka, SQS, and SNS, storing results in DynamoDB.</p><p><b>Goal:</b> Keep order processing reliable and responsive even when traffic spikes or a downstream service fails.</p><p><b>Principles:</b> Loose coupling, automatic retries, dead-letter queues for failed messages, and idempotent handlers so nothing is processed twice.</p><div class="chips"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>DynamoDB</span></div></div>
+    <div class="card rv" data-c="cloud"><div class="thumb">Cloud / DevOps</div><h3>AWS Kubernetes Platform</h3><p><b>How it works:</b> Terraform provisions the AWS network and an EKS cluster, Jenkins pipelines build and deploy Docker containers, and Prometheus and Grafana track system health.</p><p><b>Goal:</b> Make deployments repeatable, automated, and easy to monitor, so releases are routine instead of risky.</p><p><b>Principles:</b> Infrastructure as code, automated build-test-deploy stages, least-privilege access, and observability from day one.</p><div class="chips"><span>Terraform</span><span>EKS</span><span>Jenkins</span><span>Grafana</span></div></div>
+    <div class="card rv" data-c="ai"><div class="thumb">AI QA</div><h3>AI-Facilitated QA Pipeline</h3><p><b>How it works:</b> On every code change, GitHub Actions runs unit and end-to-end tests (Jest, Cypress), including test cases drafted with LLM help.</p><p><b>Goal:</b> Catch regressions before release so the team can move fast without breaking things.</p><p><b>Principles:</b> Test early and automatically, keep tests readable, and review all AI-generated tests by hand before trusting them.</p><div class="chips"><span>GitHub Actions</span><span>Cypress</span><span>LLM APIs</span></div></div>
+  </div></section>
+
+<section id="exp"><h2 class="rv">Experience</h2><p class="sub rv">Roles and what you shipped.</p>
+  <div class="tl">
+    <div class="it rv"><h3>Software Developer Engineer · Stellar Innovations</h3><small>2024 – 2026 · Bangalore, India</small><ul><li>Shipped full stack features with React, Angular, Spring Boot, and Python.</li><li>Owned performance, AWS infrastructure, CI/CD, and production reliability.</li></ul></div>
+    <div class="it rv"><h3>Software Engineering Intern · Rakuten Symphony</h3><small>Jun – Jul 2023 · Bangalore, India</small><ul><li>Built authentication, registration, and billing modules in Angular and React.</li></ul></div>
+  </div></section>
+
+<section id="skills"><h2 class="rv">Skills</h2><p class="sub rv">The tools I reach for, grouped by what they’re used for.</p>
+  <div class="grid"><div class="card sk rv"><div class="ico">◐</div><h3>Frontend & Mobile</h3><div class="chips big"><span>React</span><span>Next.js</span><span>React Native</span><span>TypeScript</span><span>JavaScript</span><span>Angular</span><span>Tailwind CSS</span><span>Responsive Design</span></div></div><div class="card sk rv"><div class="ico">◆</div><h3>Backend & APIs</h3><div class="chips big"><span>Java</span><span>Spring Boot</span><span>Python</span><span>Node.js</span><span>REST APIs</span><span>Microservices</span><span>Kafka</span><span>OAuth 2.0 / JWT</span></div></div><div class="card sk rv"><div class="ico">▲</div><h3>Cloud & DevOps</h3><div class="chips big"><span>AWS</span><span>Kubernetes</span><span>Terraform</span><span>Docker</span><span>Jenkins</span><span>GitHub Actions</span><span>Linux</span><span>OpenShift</span></div></div><div class="card sk rv"><div class="ico">●</div><h3>Data, Quality & AI</h3><div class="chips big"><span>PostgreSQL</span><span>MongoDB</span><span>DynamoDB</span><span>Jest</span><span>Cypress</span><span>Prometheus</span><span>Grafana</span></div></div></div>
+  <div class="marq rv"><div class="track"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Java</span><span>Spring Boot</span><span>Python</span><span>AWS</span><span>Kubernetes</span><span>Terraform</span><span>Docker</span><span>Kafka</span><span>PostgreSQL</span><span>Jenkins</span><span>React Native</span><span>React</span><span>Next.js</span><span>TypeScript</span><span>Java</span><span>Spring Boot</span><span>Python</span><span>AWS</span><span>Kubernetes</span><span>Terraform</span><span>Docker</span><span>Kafka</span><span>PostgreSQL</span><span>Jenkins</span><span>React Native</span></div></div></section>
+
+<section id="contact" class="contact rv"><h2>Let’s build something.</h2><p class="sub">Open to Software Engineer, Full Stack, Backend, and DevOps roles. Usually replies within a day.</p>
+  <div class="btns" style="justify-content:center"><a class="btn p" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&fs=1&to=anishmaddi782@gmail.com&su=Hello%20Anish">Email</a><button class="btn" id="cp" type="button" style="font:inherit;font-weight:600;font-size:15px;cursor:pointer">Copy email</button><a class="btn" target="_blank" rel="noopener" href="https://linkedin.com/in/anish-maddi-1708b1236">LinkedIn</a><a class="btn" target="_blank" rel="noopener" href="https://github.com/DRMaddi">GitHub</a></div></section>
+</main>
+<footer>© 2026 Anish Maddi · Built with HTML, CSS, and JavaScript</footer>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+// theme
+$('#theme').onclick=()=>{const r=document.documentElement,d=getComputedStyle(r).getPropertyValue('--bg').trim()==='#0b0c12';r.dataset.theme=d?'light':'dark'};
+// typing
+const words=['Software Engineer','Full Stack Developer','Backend Engineer · Java & Spring Boot','Cloud & DevOps · AWS, Kubernetes, Terraform','AI-Native Builder'];let w=0,c=0,del=false;
+(function t(){const s=words[w];$('#type').textContent=s.slice(0,c);if(!del&&c++===s.length){del=true;return setTimeout(t,1400)}if(del&&--c<0){del=false;c=0;w=(w+1)%words.length}setTimeout(t,del?35:75)})();
+// reveal + counters + bars
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});$$('.rv').forEach(e=>io.observe(e));
+const io2=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io2.unobserve(e.target);const n=+e.target.dataset.n,s=e.target.dataset.s||'';let i=0;const st=()=>{i+=Math.max(1,n/40);if(i>=n){e.target.textContent=n+s}else{e.target.textContent=Math.floor(i)+s;requestAnimationFrame(st)}};st()}));$$('[data-n]').forEach(e=>io2.observe(e));
+const io3=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.width=e.target.dataset.w+'%';io3.unobserve(e.target)}}));$$('.f').forEach(e=>io3.observe(e));
+// filters
+$$('.filters button').forEach(b=>b.onclick=()=>{$$('.filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');$$('#work .card').forEach(c=>c.style.display=(b.dataset.f==='all'||c.dataset.c===b.dataset.f)?'':'none')});
+// tilt + glow + progress
+$$('.card').forEach(c=>{c.onmousemove=e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(700px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-4px)`};c.onmouseleave=()=>c.style.transform=''});
+addEventListener('mousemove',e=>{$('#glow').style.left=e.clientX+'px';$('#glow').style.top=e.clientY+'px'});
+addEventListener('scroll',()=>{const h=document.documentElement;$('#bar').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'});
+$('#cp').onclick=async()=>{const b=$('#cp');try{await navigator.clipboard.writeText('anishmaddi782@gmail.com');b.textContent='Copied ✓'}catch(e){b.textContent='Press Ctrl+C on the email'}setTimeout(()=>b.textContent='Copy email',1800)};
+// custom cursor
+if(matchMedia('(hover:hover) and (pointer:fine)').matches){
+  document.body.classList.add('cc');
+  const d=$('#cd'),r=$('#cr');let mx=0,my=0,rx=0,ry=0,on=false;
+  addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;if(!on){on=true;rx=mx;ry=my;d.style.opacity=r.style.opacity=1}d.style.transform=`translate3d(${mx}px,${my}px,0)`;r.classList.toggle('hov',!!e.target.closest('a,button,.card,.stat'))});
+  (function loop(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;r.style.transform=`translate3d(${rx}px,${ry}px,0)`;requestAnimationFrame(loop)})();
+  addEventListener('mousedown',e=>{r.classList.add('down');const p=document.createElement('div');p.className='cur-rip';p.style.left=e.clientX+'px';p.style.top=e.clientY+'px';document.body.appendChild(p);setTimeout(()=>p.remove(),600)});
+  addEventListener('mouseup',()=>r.classList.remove('down'));
+  document.documentElement.addEventListener('mouseleave',()=>{d.style.opacity=r.style.opacity=0;on=false});
+}
+</script>
+</body>
+</html>
